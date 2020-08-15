@@ -1,0 +1,9 @@
+def accumulate(combiner,base,n,term):
+	result=base
+	while n>0:
+		result,n=combiner(result,term(n)),n-1
+    
+def identity(n):
+	return n
+def square(n):
+	return n*n
